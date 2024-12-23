@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Drama Queue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>OG Thoughts</h1>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'drama-list')">Drama Thoughts</button>
+        <button class="tab-button" onclick="openTab(event, 'bubble-tea-list')">Bubble Tea Thoughts</button>
+    </div>
+
+    <!-- Tab Content -->
+    <main>
+        <div id="drama-list" class="tab-content active">
+            <h2>My Drama Rankings</h2>
+
+            <!-- Finished Dramas Section -->
+            <section class="finished-dramas">
+                <h3>Finished Dramas</h3>
+                <ul class="drama-list">
+                    <li>
+                        <img src="CLOY.jpg" alt="Drama A" class="drama-image">
+                        <span class="drama-title">Crash Landing On You</span>  
+                        <span class="rating">10/10<span class="gold-star">&#9733;</span></span> <!-- Gold star inside the rating -->
+                    </li>
+                    <li>
+                        <img src="LLTG.jpg" alt="Drama A" class="drama-image">
+                        <span class="drama-title">Love Like the Galaxy</span>  
+                        <span class="rating">10/10<span class="gold-star">&#9733;</span></span> <!-- Gold star inside the rating -->
+                    </li>
+                    <li>
+                        <img src="FIYS.jpg" alt="Drama A" class="drama-image">
+                        <span class="drama-title">Falling Into Your Smile</span>  
+                        <span class="rating">9/10</span>
+                    </li>
+                    <li>
+                        <img src="HiddenLove.jpg" alt="Drama A" class="drama-image">
+                        <span class="drama-title">Hidden Love</span>  
+                        <span class="rating">9.5/10</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- In-Progress Dramas Section -->
+            <section class="in-progress-dramas">
+                <h3>In-Progress Dramas</h3>
+                <ul class="drama-list">
+                    <li>
+                        <img src="LGIEF.jpg" alt="Drama A" class="drama-image">
+                        <span class="drama-title">Love Game in Eastern Fantasy</span>  
+                        <div class="progress-container">
+                            <progress value="25" max="32"></progress> <!-- 25/32 watched -->
+                        </div>
+                        <span class="rating">9.3/10</span>
+                    </li>
+                    <li>
+                        <img src="AASOL.jpg" alt="Drama A" class="drama-image">
+                        <span class="drama-title">Amidst a Snowstorm of Love</span>  
+                        <div class="progress-container">
+                            <progress value="16" max="30"></progress> <!-- 16/30 watched -->
+                        </div>
+                        <span class="rating">9.5/10</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="bubble-tea-list" class="tab-content">
+            <h2>My Bubble Tea Rankings</h2>
+            <ul class="bubble-tea-list">
+                <li>
+                    <span class="bubble-tea-name">Brown Sugar Milk Tea</span>
+                    <span class="rating">9.5/10</span>
+                </li>
+                <li>
+                    <span class="bubble-tea-name">Matcha Latte</span>
+                    <span class="rating">8.8/10</span>
+                </li>
+                <!-- Add more bubble teas here -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="test.js"></script>
+</body>
+</html>
