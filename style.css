@@ -7,13 +7,35 @@ body {
     background-color: white;
 }
 
+
 /* Banner Styles */
+
 .banner {
     background-color: black; /* Green background */
     color: white;              /* White text */
     text-align: center;        /* Center the text */
     padding: 25px 0;           /* Add top and bottom padding */
 }
+
+/* Banner Styles */
+.banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position: relative; /* Allows positioning of the logo inside the banner */
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 50%; /* Aligns vertically to the middle of the banner */
+    left: 20px; /* Distance from the left side */
+    transform: translateY(-50%); /* Centers the logo vertically */
+    height: 100px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
 
 .banner h1 {
     font-size: 3em;            /* Large text size */
@@ -198,3 +220,62 @@ progress::-moz-progress-bar {
     color: gold;                /* Gold color for the star */
     font-size: 1.2em;           /* Make the star slightly bigger */
 }
+
+.bubble-tea-list {
+    list-style-type: decimal; /* Numbers for the ordered list */
+    margin: 0;
+    padding-left: 20px; /* Indentation for the list */
+    font-size: 1.2em; /* Slightly larger font for visibility */
+}
+
+.bubble-tea-list li {
+    margin: 10px 0; /* Space between list items */
+    padding: 5px;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 5px; /* Rounded corners for each item */
+}
+
+/* Footer container */
+.cloud-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Each cloud container */
+.cloud {
+    position: relative;
+    margin: 0 15px;
+    width: 100px;
+    height: 60px;
+    background-image: url('cloud3.png'); /* Replace 'cloud.png' with your cloud image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Link styles for text inside clouds */
+.cloud a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on links */
+.cloud a:hover {
+    color: #00796b;
+}
+
