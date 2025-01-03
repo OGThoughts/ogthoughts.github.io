@@ -1,0 +1,86 @@
+function openTab(event, tabId) {
+    // Hide all tab content
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    // Remove active class from all buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => button.classList.remove('active'));
+
+    // Show the clicked tab content
+    document.getElementById(tabId).classList.add('active');
+
+    // Add active class to the clicked button
+    event.currentTarget.classList.add('active');
+}
+
+
+<footer class="footer-bar">
+<nav class="footer-links">
+    <a href="https://math.mit.edu/~byronc/" target="_blank" aria-label="BC">
+        <span class="cloud">BC Thoughts</span>
+    </a>
+    <a href="https://abrandenberger.github.io/" target="_blank" aria-label="AB">
+        <span class="cloud">AB Thoughts</span>
+    </a>
+    <a href="https://www.julianknodt.com/" target="_blank" aria-label="JK">
+        <span class="cloud">JK Thoughts</span>
+    </a>
+</nav>
+</footer>
+
+
+
+/* Footer styles */
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Dark background for contrast */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Link styles */
+.footer-links a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative; /* Needed for cloud pseudo-elements */
+}
+
+/* Cloud background effect */
+.footer-links .cloud {
+    display: inline-block;
+    background-color: #fff; /* Cloud color */
+    color: #333; /* Text color */
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px; /* Space around the text */
+    border-radius: 50px; /* Rounded edges for a cloud look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect: "float" the cloud */
+.footer-links .cloud:hover {
+    transform: translateY(-5px); /* Slight upward movement */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* Optional: Add animation to make the clouds "float" slightly */
+.footer-links .cloud {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Keyframes for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
